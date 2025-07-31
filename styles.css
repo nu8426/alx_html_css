@@ -1,20 +1,35 @@
-/* styles.css */
-
-h1 {
-  color: darkblue;
-  text-align: center;
+/* Make body a flex container stacking children vertically */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* full viewport height */
+  margin: 0;
 }
 
-p {
-  line-height: 1.6;
-  color: #333;
+/* Make main a flex container stacking children horizontally */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* take remaining space */
 }
 
-a {
-  color: green;
-  text-decoration: none;
+/* Article takes 2 parts of the row */
+article {
+  flex: 2;
+  overflow-y: auto; /* allow vertical scrolling if content overflows */
+  padding: 1rem;
 }
 
-a:hover {
-  text-decoration: underline;
+/* Aside takes 1 part of the row */
+aside {
+  flex: 1;
+  overflow-y: auto; /* allow vertical scrolling */
+  padding: 1rem;
 }
+
+/* Optional: styling for header and footer */
+header, footer {
+  padding: 1rem;
+  background-color: #eee;
+}
+s
